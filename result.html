@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <title>Amazon Food Reviews Sentiment Analysis</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+    	<div class="container">
+			<h1 class="animate__animated animate__bounceInLeft">Amazon Fine Food Reviews</h1>
+            <div class='description'>
+    			<p><h3 class="animate__animated animate__bounceInRight">Amazon Fine Food Reviews</h3></p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1><span class='safe'>Oh Yeah! It is a +ve Review!! Cheers :) </span></h1>
+				<iframe src="https://giphy.com/embed/3o7abKhOpu0NwenH3O" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/spongebob-cartoon-nickelodeon-thumbs-3o7abKhOpu0NwenH3O">via GIPHY</a></p>			{% elif prediction==0 %}
+				<h1><span class='danger'>What a drag! This guy hates it, better luck ordering next time! -ve it is!! Damn, son :( </span></h1>
+				<iframe src="https://giphy.com/embed/ME37MAoGmQCDM3OnNI" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/RosannaPansino-rosanna-pansino-ro-ME37MAoGmQCDM3OnNI">via GIPHY</a></p>			{% endif %}
+		</div>
+
+		<!-- Footer -->
+		<div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/vgaurav3011"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/vipul-gaurav"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Stay safe and keep coding Geeks! Signing off with a bam, Kakashi Hatake of the Sharingan!! :) </p>
+        </div>
+
+	</body>
+</html>
